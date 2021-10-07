@@ -1,0 +1,1011 @@
+,question,answer,group_id
+0,"What values are specified to replaceNaN, positive infinity, and negative infinity values in input?","bynan,posinf, andneginf",141
+1,"By default,NaN is replaced with what value?",zero,141
+2,What values are used to replace negative infinity values in input?,"bynan,posinf, andneginf",141
+3,What is the default value for negative infinity?,the least finite value,141
+4,What is the value to replace positive infinity values with?,posinf,295
+5,What is the value to replace negative infinity values with?,neginf,295
+6,What is the greatest finite value represented by?,posinf,288
+7,What does Alias for torch.linalg.slogdet() do?,Performs a batch matrix-matrix product of matrices stored in input and mat2. Returns the matrix product of the NNN2-D tensors,118
+8,Returns the what solve of the linear systemAx=bAx = bAx=busing the partially pivoted LU factorization,LU,118
+9,Performs what of matrices stored in input and mat2?,a batch matrix-matrix product,118
+10,Computes the dot product for 1D tensors. Computes the eigenvalues and eigenvector,Alias of torch.outer(),118
+11,Computes the dot product for what?,1D tensors,118
+12,What is the name of the function that computes the dot product for 1D tensors?,Alias of torch.outer(),118
+13,What is a low-level function for calling LAPACK’s geqrf directly?,eigenvalues and eigenvectors of a real square matrix,118
+14,What does TORCH.DIV do?,Divides each element of the input input by the corresponding element of other.,66
+15,Always promotes integer types to what type?,default scalar type,212
+16,Performs what type of rounding if both input and other are integer types?,no rounding,209
+17,What is equivalent to NumPy's np.true_divide?,TORCH.DIV,214
+18,What is the Python equivalent to floor division in Pytorch ?,TORCH.DIV,257
+19,What type of integer division is trunc equivalent to?,C-style,257
+20,What is equivalent to the /operator in Python and NumPy'snp.true_divide?,true division,257
+21,What rounds the results of the division towards zero?,trunc,257
+22,What type of rounding rounds the results of the division down?,floor,257
+23,What does the // operator and NumPy'snp.floor_divide equivalent to?,floor division,257
+24,What type of rounding does None perform?,no rounding,257
+25,What type of division is equivalent to trunc?,C-style integer division,257
+26,What is the name of the rounding that rounds the results of a division down?,floor,257
+27,What is equivalent to floor division in Python?,NumPy’snp.floor_divide,257
+28,What is the case when the inputs are promoted to the default scalar type?,if both input and other are integer types,286
+29,What is equivalent to true division in Python?,C-style integer division,318
+30,What is the Pytorch equivalent to TORCH.DIV to in Python?,true division,318
+31,What is the default behavior of rounding in TORCH.DIV?,None,318
+32,"Does rounding_mode(str,optional) perform any rounding?",no,318
+33,"When does rounding_mode(str,optional) perform no rounding?",if both input and other are integer types,318
+34,What is equivalent to the /operator in Python?,true division,318
+35,What happens if both input and otherare integer types?,Performs no rounding,304
+36,What is the name of Alias for torch.trunc?,torch.fix,264
+37,What does Alias for torch.le stand for?,TORCH.LESS_EQUAL,19
+38,What creates a new tensor?,TORCH.COLUMN_STACK,213
+39,What is each zero or one dimensional tensortin tensors first reshaped into?,"a(t.numel(),1)column",57
+40,"What does tensors(sequence of Tensors) concatenate out(Tensor,optional",output tensor,57
+41,What TORCH.IS_TENSOR does?,Returns True if obj is a PyTorch tensor.,145
+42,What TORCH.IS_TENSOR return?,True,145
+43,What is the function that returns true if obj is a PyTorch tensor?,TORCH.IS_TENSOR,145
+44,What is the return value for if obj is a PyTorch tensor?,True,145
+45,What is the function that returns True if obj is a PyTorch tensor?,"doingisinstance(obj,Tensor)",145
+46,What is better for typechecking with mypy?,isinstance,144
+47,What is that isinstance check better for?,typechecking with mypy,144
+48,What does set_flush_denormal() do?,Disables denormal floating numbers on CPU,65
+49,On what architectures is set_flush_denormal() only supported?,x86 architectures,65
+50,What controls whether to enable flush denormal mode or not?,mode(bool),65
+51,What does set_flush_denormal() do on CPU?,Disables denormal floating numbers,65
+52,Sums the product of the elements of the inputoperandsalong dimensions specified using a notation based on what convention?,Sums the product of the elements of the input operands along dimensions specified using a notation based on the Einstein summation convention.,207
+53,What does TORCH.SPECIAL do?,"Computes the entropy on input (as defined below), elementwise.",305
+54,What does TORCH.BARTLETT_WINDOW do?,The input window_length is a positive integer controlling the returned window size. periodic flag determines whether the returned window trims off the last duplicate value from the symmetric window and is ready to be used as a periodic window with functions like torch.stft(),220
+55,What is the Bartlett window function?,"The input window_length is a positive integer controlling the returned window size. periodic flag determines whether the returned window trims off the last duplicate value from the symmetric window and is ready to be used as a periodic window with functions like torch.stft(). Therefore, if periodic is true, the NN in above formula is in fact 	ext{window_length} + 1window_length+1. Also, we always have torch.bartlett_window(L, periodic=True) equal to torch.bartlett_window(L + 1, periodic=False)[:-1]).",221
+56,"What is the same as totorch.bartlett_window(L+1,periodic=False)?",havetorch.bartlett_window,222
+57,What does TORCH.BARTLETT_WINDOW returns?,"A 1-D tensor of size (	ext{window_length},)(window_length,) containing the window",96
+58,What is the desired data type of returned tensor?,"dtype(torch.dtype, optional)",108
+59,What is non-integerstep subject to when comparing againstend?,floating point rounding errors,108
+60,What is the starting value for the set of points?,start(Number),108
+61,What is the ending value for the set of points?,end(Number),108
+62,When the data type is inferred from the other input arguments?,If dtype is not given,108
+63,"What is the default dtype inferred to if any ofstart,end, orstopare floating-point?",betorch.int64,108
+64,What is the default for the layout of the returned Tensor?,Default:torch.strided,108
+65,What is the length of the window that contains a single value?,window_length=1=1=1,91
+66,What is the size of returned window periodic?,window_length,343
+67,What is the desired layout of returned window tensor?,layout,343
+68,What type of layout is supported?,Only torch.strided,343
+69,What is the desired device of returned tensor by torch.bartlett_window?,"device(torch.device, optional)",343
+70,What should record operations on the returned tensor?,autograd,343
+71,What is the default value for autograd to record operations on the returned tensor?,Default:False,343
+72,What is the library part of?,thePyTorchproject,246
+73,What is the release status of PyTorch?,Stable,246
+74,What is the library part of?,thePyTorchproject,246
+75,What is PyTorch?,open source machine learning framework,247
+76,What does PyTorch expect to maintain?,backwards compatibility,247
+77,What project is this library part of?,thePyTorchproject,247
+78,What do we expect to maintain?,backwards compatibility,247
+79,What are we not committing to?,backwards compatibility,247
+80,We are not committing to what?,backwards compatibility,247
+81,"Thetorchaudiopackage consists of I/O, common audio transformations, and what?",popular datasets,247
+82,"What consists of I/O, popular datasets and common audio transformations?",Thetorchaudiopackage,247
+83,What type of machine learning framework is PyTorch?,open source,245
+84,What is the release status of the features described in this documentation?,Stable,73
+85,What is the release status of features described in this documentation?,Stable,74
+86,What may the API change based on?,user feedback,74
+87,What classification are Beta features committed to seeing through?,"Features are tagged as Beta because the API may change based on
+user feedback, because the performance needs to improve, or because
+coverage across operators is not yet complete.",74
+88,What libraries are included in Thetorchaudiopackage?,Package Reference PyTorch Libraries,74
+89,What type of features will be maintained long-term?,Stable,206
+90,How long will these features be maintained?,long-term,206
+91,Why are features tagged as Beta?,the performance needs to improve,28
+92,What classification do we commit to seeing a feature through to?,Stable,28
+93,What are features sometimes hidden behind?,run-time flags,133
+94,What are features at an early stage for?,feedback and testing,133
+95,What does Thetorchaudiopackage consist of?,"I/O, common audio transformations, popular datasets",133
+96,What are PyPI and Conda features sometimes hidden behind?,early stage for feedback and testing.,133
+97,What are Prototype features at an early stage for?,feedback and testing,133
+98,What is the LU solve of the linear systemAx=bAx = bAx=busing?,LU factorization of A fromtorch.lu(),171
+99,"This function supports float,double, and what other type of input?",cfloat,171
+100,What types of types does this function support?,"float,double,cfloatandcdoubledtypes forinput",172
+101,What is the pivoted LU factorization of A fromtorch.lu()?,LU_data(Tensor),172
+102,"What is the RHS tensor of size(,m,k)(*, m, k)(,m",b(Tensor),270
+103,"What is the pivoted LU factorization of A fromtorch.lu()of size(,m,m)(*,",LU_data,270
+104,"What are the pivots of the LU factorization fromtorch.lu()of size(,m)(*, m",LU_pivots,270
+105,What must the batch dimensions ofLU_pivots be equal to?,the batch dimensions ofLU_data,270
+106,Returns what of the linear systemAx=bAx = bAx=busing the partially pivoted LU factorization of A,LU solve,42
+107,"Out(Tensor,optional) – what?",output tensor,307
+108,Returns the indices that sort a tensor along a given dimension in what order?,ascending order by value,178
+109,What does the documentation of bytorch.sort() provide?,exact semantics,178
+110,What do you need to know about the second value returned bytorch.sort()?,semantics,178
+111,What is argsort?,argsort Returns the indices that sort a tensor along a given dimension in ascending order by value,178
+112,argsort Returns the indices that sort a tensor along a given dimension in what order?,ascending order by value,178
+113,What is the second value returned?,bytorch.sort(),178
+114,What is the dimension to sort along descending?,"dim(int,optional)",178
+115,What is returned bytorch.sort()?,second value,178
+116,"What is the dimension to sort along descending(bool,optional)?","dim(int,optional)",178
+117,What returns the cumulative maximum of elements of input in the dimensiondim?,a namedtuple,158
+118,What is the index location of each maximum value found in the dimensiondim?,Andindices,160
+119,What type of window types are supported?,floating point types,342
+120,What returns a window to be used as periodic function?,torch.bartlett_window,317
+121,What types are supported only by torch.bartlett_window?,floating point types,278
+122,What is supported for dense layout by torch.bartlett_window?,Only torch.strided,291
+123,"A 1-D tensor of size(window_length,)(textwindow_length,)(window_",window Tensor,274
+124,What is the default setting for autograd to record operations on the returned tensor?,False,274
+125,"What is a window Tensor of size(window_length,)(textwindow_length,)(wind",1-D tensor,274
+126,What does if None use for the default tensor type?,current device,280
+127,What is step(Number)?,the gap between each pair of adjacent points,280
+128,What happens when a data type is inferred from the other input arguments?,If dtype is not given,280
+129,What is the default layout of returned tensor?,Default:torch.strided,280
+130,Returns what of a given tensor?,matrix norm or vector norm,10
+131,How does Glorot describe training deep feedforward neural networks?,using a uniform distribution,273
+132,"What function does a 2-dimensionaltorch.Tensor Examples Fills the 3, 4, 5-dimensional inputTens",Dirac delta function,273
+133,"What is it called when a tensor has values sampled fromU(a,a)mathcalU(",Glorot initialization,273
+134,What is the term for a tensor?,tensor,268
+135,"In what year did Glorot, X. & Bengio, Y. begin training deep feedforward neural networks?",2010,328
+136,What is a Tensor gain?,an optional scaling factor,328
+137,"Fills the 3, 4, 5-dimensional input Tensor with what function?",Dirac delta function,77
+138,What is another name for Glorot initialization?,"torch.nn.init.xavier_uniform_(tensor, gain=1.0)",324
+139,What is a tensor gain?,an optional scaling factor,324
+140,"Glorot, X. & Bengio, Y. (2010), using what distribution?",normal distribution,324
+141,What does tensor fill the 2-dimensional input Tensor with?,identity matrix,324
+142,"What function does tensor fill the 3, 4, 5-dimensional input Tensor with?",Dirac delta function,324
+143,"What is the resulting tensor's values sampled fromN(0,std2)mathcalN(",Glorot initialization,324
+144,What is an optional tensor gain?,scaling factor,324
+145,What is batch1(Tensor)?,first batch of matrices to be multiplied batch2(Tensor),114
+146,What is an example of a batch matrix-matrix product?,Example,114
+147,What does this class wrap?,arbitrary optim.Optimizer,240
+148,What happens after parameters are updated locally?,each rank will broadcast its parameters to all other peers,240
+149,What kind of algorithm does ZeroRedundancyOptimizer use?,greedy,240
+150,What is the partition of each parameter at each rank?,arbitrary,240
+151,Restore the global parameter groups. to(int) – the rank that receives the global states. (default: 0) ,Restore the global parameter groups,240
+152,Each parameter belongs to what?,a single rank,265
+153,Params(Iterable) – anIterableof torch.Tensors optimizer_class(tor,local optimizer,265
+154,"When disabled, each what will be communicated separately?",individual parameter,265
+155,What uses a greedy algorithm to pack a number of parameters at each rank?,ZeroRedundancyOptimizer,265
+156,What is the partition of the algorithm?,arbitrary,265
+157,What is the default behavior of ZeroRedundancyOptimizer?,all trailing arguments will be forwarded to the given optimizer,265
+158,state_dict(dict) – what state should be an object returned from a call tostate_dict() Gets this rank’sstate,optimizer state,265
+159,What should state_dict(dict) be?,an object returned from a call tostate_dict() Gets this rank’sstate_dict,265
+160,What is a list ofparam_groups?,a list ofparam_groups,265
+161,What corresponds to the param_groups for a rank?,Element 0,265
+162,"What group(ProcessGroup, optional) –torch.distributedProcessGroup?","group(ProcessGroup, optional) –torch.distributedProcessGroup",302
+163,"When enabled, parameters will be packed into what?",larger buckets,302
+164,What is the default in torch.distributed.optim.ZeroRedundancyOptimizer?,all trailing arguments will be forwarded to the given optimizer,302
+165,How many update the consolidated state_dict list?,one per rank,302
+166,When can adding a param group to theOptimizersparam_groups be useful?,when fine tuning a pre-trained network,302
+167,How many consolidated state_dict lists are updated per rank?,one per rank,302
+168,To(int) – the rank that receives the global states. (default: what?,0,302
+169,"When disabled, what happens to each individual parameter?",each individual parameter will be communicated separately,302
+170,State_dict(dict) – optimizer state. Should be what?,an object returned from a call tostate_dict() Gets this rank’sstate_dict,302
+171,Returns what for a given rank?,local_state_dict,302
+172,What is the class of the local optimizer?,optimizer_class,302
+173,What should be optimized along with group specific optimization options?,Tensors,302
+174,"What corresponds to rank 0, etc. We need all the ranks for the broadcast insidestep(). Returns the local_state_dict for a",Element 0,302
+175,globalstate_dict is what?,last known global optimizer state,302
+176,What performs performs?,Performs,302
+177,When can a param group be useful?,when fine tuning a pre-trained network,316
+178,What is params(Iterable) – anIterableof torch.Tensors?,optimizer,316
+179,"Update the consolidated state_dict list, how many per rank?",one per rank,316
+180,Restore the global parameter groups as well as the what?,shard,316
+181,state_dict(dict) – what?,optimizer state,316
+182,"Which element corresponds to rank 0, etc. We need all the ranks for the broadcast insidestep(). Returns the local_state_dict for ",Element 0,316
+183,What package contains data structures for multi-dimensional tensors and defines mathematical operations over these tensors?,torch,229
+184,What counterpart does the torch package have?,CUDA,229
+185,What does the torch package return?,total number of elements in theinputtensor,229
+186,What does the torch package construct?,a tensor withdata,229
+187,What does the COO(rdinate) format contain?,specified values at the givenindices,229
+188,What does the torch package do?,Create,229
+189,Returns what if theinputis a single element tensor?,True if theinputis a single element tensor,149
+190,Creation ops are listed under Random sampling and include:torch.rand()torch.rand()torch.rand,Random sampling,149
+191,"Returns a tensor filled with the scalar value0, with the shape defined by the variable argumentsize. Returns ",Returns a tensor,149
+192,Get the what?,current default floating pointtorch.dtype,148
+193,Random sampling creation ops are listed under Random samplingand include:torch.rand()torch.rand()torch.,Random sampling creation ops,64
+194,Constructs what?,a tensor withdata,53
+195,"What type of tensor of sizesteps whose values are evenly spaced from start to end, inclusive?",one-dimensional,53
+196,"What returns a tensor filled with the scalar value0, with the shape defined by the variable argumentsize?",a tensor filled with the scalar value0,150
+197,What does a tensor in COO(rdinate) format contain?,specified values at the givenindices,139
+198,What is created of sizesteps whose values are evenly spaced from start to end inclusive?,one-dimensional tensor,139
+199,Returns a tensor filled with the shape defined by the variable argumentsize. Returns a tensor filled with what?,scalar value1,5
+200,Returns a what tensor with ones on the diagonal and zeros elsewhere?,2-D,5
+201,Returns a what?,random permutation of integers from0ton-1,6
+202,Random numbers from a normal distribution with mean0and variance1 is also called what?,standard normal distribution,6
+203,Returns a tensor with the same size as input that is filled with random numbers from a normal distribution with mean what?,0 and variance 1,6
+204,Where is each element sampled from?,Poisson distribution,6
+205,What is returned if a tensor is filled with random integers generated uniformly betweenlow(inclusive) andhigh(exclusive),a tensor,6
+206,What does Sets the default floating point dtype tod get?,current default floating pointtorch.dtype,195
+207,Returns a what type of tensor of size end start stepleftlceil fractextend,1-D tensor,195
+208,What is the current default floating pointtorch.dtype?,current default floating pointtorch.dtype,87
+209,Returns a what type of tensor?,1-D tensor,87
+210,Returns a tensor filled with what value1?,scalar,196
+211,Creation ops are listed under Random sampling and include:torch.rand()torch.rand()torch.randin,Random sampling,196
+212,Returns a what type of tensor of size end start step+1leftlfloor fractext,1-D tensor,192
+213,Returns what tensor of size end start step+1leftlfloor fractextend -,1-D tensor,194
+214,What type of tensor is returned?,tensor filled with the scalar value1,147
+215,What type of tensor of sizesteps whose values are evenly spaced from start to end inclusive?,one-dimensional tensor,55
+216,Returns what tensor with ones on the diagonal and zeros elsewhere?,2-D tensor,55
+217,Returns an uninitialized tensor with what size?,same size asinput,55
+218,Concatenates what in the given dimension?,given sequence ofseqtensors,52
+219,"Splitsinput, a tensor with three or more dimensions, into what?",multiple tensors depthwise,52
+220,Gathers values along an axis specified what?,by dim,52
+221,Expectsinputto be = what?,2-D tensor,52
+222,"Splitsinput, a tensor with one or more dimensions, into what?",multiple tensors,56
+223,What is the name of the index that returns a new tensor which indexes theinputtensor along dimensiondimusing,a LongTensor,56
+224,Creates a new tensor by doing what?,horizontally stacking the tensors in tensors,56
+225,What happens along an axis specified by dim?,Gathers values,56
+226,What does Alias for torch.movedim() return a new tensor that is?,a narrowed version of inputtensor,56
+227,"What function returns a tensor with the same data and number of elements asinput, but with the specified shape?",Alias of torch.vstack(),56
+228,What are the elements of input at the given?,indices,56
+229,Stack tensors in sequence what way (column wise)?,horizontally,13
+230,What is the boolean maskmask that returns a new 1-D tensor which indexes theinputtensor,a BoolTensor,13
+231,What is the new tensor that returns a new tensor that is?,a narrowed version of inputtensor,13
+232,What does Alias for torch.transpose() stand for?,"tack tensors in sequence depthwise (along third axis).   Gathers values along an axis specified by dim.   Splitsinput, a tensor with one or more dimensions, into multiple tensors horizontally according toindices_or_sections",13
+233,What happens when a sequence of tensors is stacked along a new dimension?,Concatenates a sequence of tensors along a new dimension,13
+234,Selects values frominput at what?,1-dimensional indices,13
+235,Where do Stack tensors stack in sequence?,depthwise,13
+236,Gathers values along what axis?,axis specified by dim,13
+237,Splitsinput into what horizontally according toindices_or_sections?,multiple tensors,13
+238,What is the name of the index which indexes theinputtensor along dimensiondimusing the entries inindex?,a LongTensor,13
+239,Returns what with the elements of input at the given indices?,a new tensor,13
+240,Sets the seed for generating random numbers to what?,non-deterministic random number,198
+241,Sets the seed for generating random numbers to a non-deterministic random number.,Sets the seed for generating random numbers,198
+242,Random numbers drawn from separate normal distributions where mean and standard deviation are given?,whose mean and standard deviation are given,198
+243,What is filled with random numbers from a normal distribution with mean 0 and variance 1?,a tensor with the same size asinput,198
+244,What is the in-place version of torch.Tensor.bernoulli_()?,torch.Tensor.bernoulli_(),198
+245,Returns the initial seed for generating random numbers as what?,Python long,179
+246,Returns a tensor filled with random integers generated uniformly what?,betweenlow(inclusive) andhigh(exclusive),179
+247,Returns a tensor of random numbers drawn from separate normal distributions where mean and standard deviation are given?,whose mean and standard deviation are given,179
+248,What does Returns a tensor filled with random integers generated uniformly betweenlow(inclusive) andhigh(exclusive)?,a tensor,179
+249,Draws binary random numbers (0 or 1) from a what distribution?,Bernoulli,68
+250,What is returned with the same shape as Tensorinputfilled with random integers generated uniformly betweenlow(inclusive) andhigh(exclusive,a tensor,68
+251,What is the name of the number drawn from the Cauchy distribution torch?,torch.Tensor.cauchy_(),68
+252,Each element sampled from a what distribution with rate parameter given by the corresponding element in input?,Poisson,68
+253,What returns a tensor filled with random numbers from a normal distribution with mean 0 and variance1?,random permutation of integers from0ton-1,68
+254,What is the name of the in-place version of the Torch.bernoulli() torch?,torch.Tensor.bernoulli_(),68
+255,What is the tensor filled with in Bernoulli distribution?,random integers,68
+256,Returns what where each row containsnum_samplesindices sampled from the multinomial probability distribution located in the corresponding row,a tensor,197
+257,What returns a random permutation of integers from0ton-1?,random permutation of integers from0ton-1,197
+258,Sets what state?,random number generator state,197
+259,Returns what tensor with the same shape as Tensorinputfilled with random integers generated uniformly betweenlow(inclusive),a tensor,197
+260,From what distribution is each element sampled?,Poisson distribution,170
+261,Returns a tensor of random numbers drawn from separate normal distributions what?,whose mean and standard deviation are given,170
+262,Where each row containsnum_samplesindices sampled from the multinomial probability distribution located in the corresponding row of ten,a tensor,170
+263,Returns a tensor with what shape as Tensorinput?,same shape,170
+264,What is the name of the in-place version of Torch.bernoulli() torch?,torch.Tensor.bernoulli_(),170
+265,What is the name of the function that returns the initial seed for generating random numbers as a Python long?,Sets the seed for generating random numbers,199
+266,Returns the initial seed for generating random numbers as a what?,Python long,199
+267,Sets the seed for generating random numbers. Returns the random number generator state as atorch.ByteTensor.,random number generator state,199
+268,What are the numbers drawn from the Cauchy distribution?,torch.Tensor.cauchy_(),199
+269,What is a tensor filled with?,uninitialized data,58
+270,Computes the what value of each element in input?,absolute value,37
+271,Adds what to each element of the inputinputand returns a new resulting tensor?,scalar other,37
+272,What clamps all elements in inputinto the range?,Clamps all elements in inputinto the range,37
+273, torch.abs() Computes the what cosine of each element in input?,inverse,16
+274,What does Alias for torch.acosh() add?,scalar otherto each element of the inputinput,16
+275,What does Alias for torch.abs() do?,Computes the inverse cosine of each element in input,16
+276,What is the cosine of the elements of input?,inverse hyperbolic,49
+277,Computes the what cosine of each element in input?,inverse,49
+278,Computes the inverse cosine of each element in input. Computes the smallest integer greater than or equal to each element.,torch.clamp(),49
+279,Performs the element-wise division what?,of tensor1 by tensor2,126
+280,Computes the giveninputtensor's what?,element-wise angle,126
+281,Which function returns a new tensor with the arctangent of the elements of input?,torch.asinh(),126
+282,Performs the element-wise multiplication what?,of tensor1 by tensor2,126
+283, torch.asin(). Returns a new tensor with what of the elements of input?,inverse hyperbolic sine,126
+284, torch.asinh(). Returns a new tensor with the what of the elements ofin,arctangent,126
+285,"Clamps which elements in inputinto the range[min,max].?","all elements in inputinto the range[min,max].",126
+286, torch.clamp(). Computes the what of the giveninputtensor?,element-wise conjugate,126
+287,"Create a new what tensor with the magnitude of inputand the sign ofother, elementwise?",floating-point tensor,126
+288,Performs what?,element-wise multiplication,17
+289,Inputi/otheritextinput_i / textotheriinputi /other,quadrant,17
+290,Computes the giveninputtensor. Returns a new tensor with the arcsine of the elements ofin,element-wise angle,17
+291,What function adds the scalar otherto each element of the inputinputand returns a new resulting tensor?, torch.acosh(),17
+292,Returns a new tensor with what of the element?,cosine,17
+293,What does Alias for torch.asinh() return a new tensor with?,arctangent,43
+294,What is the smallest integer greater than or equal to each element?,the ceil of the elements of input,43
+295,What is computed?,the element-wise angle (in radians) of the giveninputtensor,43
+296,Who returns a new tensor with the inverse hyperbolic tangent of the elements of input?, torch.atanh(),167
+297,What function computes the element-wise conjugate of the giveninputtensor?, torch.clamp(),167
+298,Who returns a new tensor with the arctangent of the elements of input?, torch.asinh(),167
+299,What is the name of the function that returns a new tensor with the exponential of the elements of input?, torch.special.erfinv(),167
+300,Returns a new tensor with what of the elements of the elements of the input?,inverse hyperbolic sine of the elements of input,167
+301,Computes the what of inputandother?,bitwise XOR,1
+302,Clamps all elements in inputinto what range?,"range[min,max]",1
+303,"Create a new what with the magnitude of inputand the sign ofother, elementwise?",floating-point tensor,1
+304,Returns a new tensor with what element of the elements of input?,cosine,1
+305,What are the elements of inputconverted from?,angles in degrees to radians,1
+306,What happens to each element of the inputinput by the corresponding element ofother?,Divides each element of the inputinputby the corresponding element ofother,1
+307,Computes the logarithmic derivative of the gamma function oninput?, torch.div(),1
+308,Computes the what of the gamma function oninput?,logarithmic derivative,1
+309,What does Alias for torch call?,special.erf(),1
+310,What is another name for Alias for torch.special.erf()?, torch.special.erfc(),1
+311,What element of the elements of input does Alias for torch.asinh() return a new tensor with,arctangent,1
+312,Returns a new tensor with the inverse hyperbolic tangent of the elements of input. Alias fort,atan(),1
+313,The arctangent of inputi/otheri is considered with consideration of what?,quadrant,1
+314,What function returns a new tensor with the exponential of the elements of the input tensorinput?, torch.special.erfinv(),1
+315,Returns a new tensor with what of the elements of the input tensorinput?,exponential,1
+316,What is the name of the function that returns a new tensor with the exponential of the elements of the input tensorinput, torch.special.exp2(),1
+317,Who returns a new tensor with the inverse hyperbolic sine of the elements of input?,torch.asin(),164
+318,Computes the logarithmic derivative of the gamma function oninput. Computes the logarithmic derivative of the, torch.special.erf(),164
+319,Clamps all elements in inputinto what?,"range[min,max]",128
+320,Which function returns a new tensor with the inverse hyperbolic tangent of the elements of input?, torch.atanh(),128
+321,Inputi/otheritextinputi / textotheriinputi /otheri with consideration of,quadrant,128
+322,Multiply the result by the scalarvalue and add it toinput. Computes the element-wise angle (in radi,of tensor1 by tensor2,128
+323,Computes what of the giveninputtensor?,the element-wise angle,128
+324,Computes the element-wise what of the giveninputtensor?,conjugate,128
+325,What is returned with each of the elements of inputconverted from angles in degrees to radians?,a new tensor,128
+326,What does divide each element of the inputinput by the corresponding element ofother?,Divides each element of the inputinputby the corresponding element ofother,128
+327,What type of tensor is created with the magnitude of input?,floating-point tensor,166
+328,Returns the indices of what value of all elements in theinputtensor?,the maximum value,11
+329,Tests if all elements in inputevaluate what?,toTrue,11
+330,Returns the log of summed exponentials of each row of theinputtensor in the given dimensiondim. Returns the mean,p-norm of (input-other) Returns the log of summed exponentials,11
+331,"Returns the median of the values in input, doing what?",ignoringNaNvalues,11
+332,Computes what quantiles of each row of theinputtensor along the dimensiondim?,q-th,11
+333,What is the result of Computes the q-th quantiles of each row of theinputtensor along the dimensiondim,variant of torch.quantile()that “ignores”NaNvalues,11
+334,"If unbiased is True, what will be used?",Bessel’s correction,11
+335,Bessel's correction will be used to calculate what?,standard deviation,11
+336,"Returns the input tensor. Eliminates all but the first element from every consecutive group of equivalent elements. If unbiased is True,",unique elements,11
+337,Which element is eliminated from every consecutive group of equivalent elements?,Eliminates all but the first element,11
+338,When Bessel’s correction will be used.,If unbiased is True,11
+339,Returns the maximum value of all elements in theinputtensor. Returns the minimum value of all elements in theinputtensor,input tensor,11
+340,Returns a what dimension view of each input tensor with zero dimensions?,3-dimensional,153
+341,What is one way to create a block diagonal matrix from provided tensors?,Count the frequency of each value in an array of non-negative ints,153
+342,"Returns what of the buckets to which each value in the input belongs, where the boundaries of the buckets are set byboundaries",indices,153
+343,What Sums the product of the elements of the inputoperandsalong dimensions specified using a notation?,Sums the product of the elements of the inputoperandsalong dimensions specified using a notation,153
+344,What is created from provided tensors?,Create a block diagonal matrix,154
+345,What product of the given sequence of tensors. Computes batched the p-norm distance between each pair of the,Do cartesian product,154
+346,Compute combinations of lengthrrrof the given tensor. Returns a copy of input. Returns a copy of,Compute combinations of lengthrrrof the given tensor,154
+347,Returns a view of each input tensor with zero dimensions. Count the frequency of each value in an array of non-negative in,3-dimensional,154
+348,What is another way to create a block diagonal matrix from provided tensors?,Count the frequency of each value in an array of non-negative ints,154
+349,What is the result of Flattensinput by reshaping it into a one-dimensional tensor?,Reverse,154
+350,Broadcasts the given tensors according to what?,Broadcasting semantics,54
+351,How do you count the frequency of each value in an array of non-negative ints?,Count the frequency of each value in an array of non-negative ints,54
+352,Create what from provided tensors?,block diagonal matrix,54
+353,Compute combinations of lengthrrrof the given tensor. Returns the cross product of vectors in dimensiondimof input,Compute combinations of lengthrrrof the given tensor,54
+354,Reverse the order of what along given axis?,n-D tensor,54
+355,Returns what wherevaluesis the cumulative minimum of elements of inputin the dimensiondim?,"a namedtuple(values,indices)",33
+356,What does Rotate by 90 degrees in the plane specified by dims axis?,Rotate a n-D tensor,33
+357,Computes the histogram of what?,element-wise greatest common divisor,33
+358,Computes what along the given dimension?,n-th forward difference,156
+359,What is done by reshaping it into a one-dimensional tensor?,Flattensinput,156
+360,Sums the product of the elements of inputoperandsalong dimensions specified using a notation based on what?,Einstein,156
+361,Compute combinations of lengthrrof the given tensor. Returns the cross product of vectors in dimensiondimof inputand,Compute combinations of lengthrrrof the given tensor,156
+362,What returns a new tensor?,Flip tensor in the up/down direction,156
+363,"In the left/right direction, returning a new tensor. Flip tensor in the up/down direction, returning a",Flip tensor,156
+364,"Computes what product, denoted by otimes, of inputandother?",Kronecker,156
+365,What does Rotate a n-D tensor by 90 degrees in the plane specified by dims axis?,Rotate,156
+366,Computes the element-wise greatest common divisor of inputandother. Computes the histogram of a tensor.,GCD,156
+367,Computes what of a tensor?,histogram,156
+368,What can be either scalar or scalar?,TakeNNNtensors,156
+369,For what do Broadcast_tensors() work?,shapes,200
+370,Flattensinput by reshaping it into what?,one-dimensional tensor,200
+371,"In the left/right direction, returning a new tensor. In the up/down direction, returning a new tensor",Flip tensor,200
+372,Reverse the order of what along given axis in dims?,n-D tensor,173
+373,Performs what of matrices stored inbatch1andbatch2 with a reduced add step (all matrix multiplications get ,a batch matrix-matrix product,119
+374,Performs a batch matrix-matrix product of what?,matrices inbatch1andbatch2,119
+375,Returns what matrix product of the NNN2-D tensors?,matrix product of -D tensors,119
+376,What does Computes the LU factorization of a matrix?,Computes the LU factorization of a matrix,119
+377,What product of the matrixmatand the vectorvec is performed?,matrix-vector product,122
+378,Performs what of the matrices mat1 and mat2?,matrix multiplication,122
+379,Performs the outer-product of vectors vec1 and vec2and adds it to what?,matrix input,125
+380,Performs what of the matrixmatand the vectorvec?,matrix-vector product,125
+381,Computes the inverse of a symmetric positive-definite matrixAAAusing its what?,Cholesky factoruuu,184
+382,Positive semidefinite matrix to be inverted given its what?,Cholesky factor matrixuuu,184
+383,What does the matrix product of two tensors return?,Matrix product of two tensors,184
+384,What does matrix_power() return?,numerical rank,184
+385,Computes the solution to what problems for a full rank matrix?,least squares and least norm problems,184
+386,Computes the decomposition of a symmetric positive-definite matrixAAAor for batches of symmetric positive-definite matrices,Cholesky,184
+387,Returns what of the NNN2-D tensors?,matrix product,184
+388,Computes what of a real square matrix?,eigenvalues and eigenvectors,184
+389,What is this function for calling LAPACK's geqrf directly?,low-level function,184
+390,What does a linear system of equations with a positive semidefinite matrix have to be inverted given?,Cholesky factor matrixuuu,184
+391,Computes the dot product of two 1D tensors. Computes the eigenvalues and eigenve,Computes the dot product of two 1D tensors,205
+392,Computes the what factorization of a matrix or batches of matricesA?,LU,205
+393,Returns what solve of the linear systemAx=bAx = bAx=busing the partially pivoted LU factorization of,LU,205
+394, torch.linalg.matrix_power() Returns what of a 2-D tensor?,numerical rank,205
+395,What product of the matrix inputand the vectorvec is performed?,matrix-vector,205
+396,What is the householder_product of Alias for torch.linalg?,householder_product,205
+397,What does Alias of torch.outer() do?,Computes the dot product for 1D tensors,205
+398,Computes the eigenvalues and eigenvectors of a real square matrix. This is a what?,low-level function,41
+399,Computes the dot product for 1D tensors. Computes the dot product for 1D tensors,Alias of torch.outer(),41
+400,Calculates what of a square matrix or batches of square matrices?,log determinant,41
+401,Computes the what of a matrix or batches of matricesA?,LU factorization,41
+402,What is the LU factorization of a tensor?,LU factorization of a tensor into tensorsLandU,41
+403,Computes the matrix exponential of a square matrix or of each square matrix in a batch ,Computes the matrix exponential of a square matrix or of each square matrix in a batch,41
+404,Performs what of the matricesinput and mat2?,matrix multiplication,41
+405, torch.linalg.matrix_power() Returns the what of a 2-D tensor,numerical rank,41
+406,Performs a what product of the matrix inputand the vectorvec?,matrix-vector,41
+407,Computes the matrix-matrix multiplication of a product of Householder matrices with a general matrix?,Computes the matrix-matrix multiplication of a product of Householder matrices with a general matrix,41
+408,Computes the matrix-matrix multiplication of a product of Householder matrices with a general matrix. Outer product,householder_product(),41
+409,What product of inputandvec2?,Outer product,41
+410,Who computes the matrix-matrix multiplication of a product of Householder matrices with a general matrix?, torch,41
+411,What is the dot product for?,1D tensors,41
+412,Computes the eigenvalues and eigenvectors of what?,real square matrix,41
+413,What is the batch matrix-matrix product of?,matrices inbatch1andbatch2,110
+414,Performs the what of vectors vec1 and vec2and adds it to the matrix input?,outer-product,132
+415,Unpacks the data and pivots from a LU factorization of a tensor into what?,tensorsLand,132
+416,What is a matrix product of two tensors?,Matrix product of two tensors,40
+417,What does Alias of torch.outer() compute the dot product for?,1D tensors,40
+418,What does Alias for torch.linalg.det() calculate of a square matrix or batches of square matrices,log determinant,40
+419,What is a low-level function for calling LAPACK's geqrf directly?,Alias of torch.outer(),40
+420,What is computed by Computes the dot product of two tensors?,Matrix product of two tensors,39
+421,Computes the matrix-matrix multiplication of a product of what with a general matrix?,Householder matrices,39
+422,What does Computes the matrix-matrix multiplication of a product of Householder matrices with a general matrix do?,Out,39
+423,What is the current state of this module?,BETA,248
+424,"See what for details. Computes the entropy oninput(as defined below), elementwise.",documentation of each function,248
+425,Computes the error function of input. The error function is defined as follows: what is the input tensor?,input(Tensor) – the input tensor,248
+426,Computes the error function of input. The error function is defined as follows: input(Tensor) – the input ten,output tensor,248
+427,Computes the complementary error function of input. The complementary error function is defined as follows: what is the input tensor?,input(Tensor) – the input tensor,248
+428,What is an example of a Computes the exponential of the elements minus 1 of input?,Bessel function,248
+429,What is the name of the function that Computes the error function of input?,Computes the complementary error function of input,47
+430,What is the name of the function that Computes the inverse error function of input?,Computes the inverse error function of input,47
+431,Computes the elements minus 1 of input. Note This function provides greater precision than exp(x) - 1 for small values of ,exponential,47
+432,Computes the absolute value of the gamma function oninput. input(Tensor) – the input tens,natural logarithm,47
+433,Computes the natural logarithm of the absolute value of the gamma function oninput?,input(Tensor),230
+434,"Input(Tensor) – the input tensor. Out(Tensor,optional) – the output","out(Tensor,optional)",306
+435,What is the error function defined as?,input(Tensor) – the input tensor,306
+436,What is an example of a function that computes the error function of input?,Computes the complementary error function of input,306
+437,"What is an example of an error function that is defined in the range(1,1)(-1, 1)(1,1)?",Computes the inverse error function of input,306
+438,What is the first kind?,exponentially scaled zeroth order modified Bessel function,46
+439,What is also known as the logistic sigmoid function?,Computes the complementary error function of input.,290
+440,What is an example of a computation?,Computes the natural logarithm of the absolute value of the gamma function oninput,290
+441,Computes the first kind for each element of input. input(Tensor) – the input tensor. out(,exponentially scaled zeroth order modified Bessel function,290
+442,What is an example of a function that computes the inverse error function of input?,Computes the inverse error function of input,290
+443,Computes the first kind of what function for each element of input?,exponentially scaled zeroth order modified Bessel function,289
+444,What is deprecated and may be removed in a future PyTorch release?,torch.norm,338
+445,What is used when computing vector norms?,torch.linalg.vector_norm(),259
+446,What function is used when computing vector norms?,torch.linalg.vector_norm(),263
+447,What does torch.linalg.matrix_norm() do?,matrix norm or vector norm of a given tensor.,337
+448,What function can be used  instead of torch.linalg.norm()?,torch.linalg.vector_norm(),337
+449,What type of data type must the input tensor have for torch.norm??,floating point or complex type,285
+450,How is the norm calculated for complex inputs?,the absolute value of each element,285
+451,Nuclear norm can only be calculated across what?,exactly two dimensions,285
+452,What is the default order of norms?,Default:'fro',330
+453,What is the name of the order in which a norm can be calculated in torch.norm?,"fro, nuc, Number",330
+454,The corresponding dimensions of input are what in torch.norm?,flattened,293
+455,What is the vector norm 'fro'?,Frobenius norm,293
+456,What is the name of the norm that can be calculated in torch.norm?,Frobenius norm,310
+457,What is the ord matrix norm vector norm?,"fro, nuc, Number",303
+458,What is the vector norm fro?,ord matrix norm,303
+459,When does Frobenius norm throw an error?,when dimis a list of three or more dims,85
+460,What can only be calculated across exactly two dimensions?,Nuclear norm,85
+461,What produces the same result asp=2 in all cases except when dimis a list of three or more dims?,Frobenius norm,182
+462,Nuclear norm can only be calculated across exactly how many dimensions?,two,182
+463,What can be calculated across any number of dimensions?,vector norm,231
+464,What happens to the corresponding dimensions of input in torch.norm?,flattened,331
+465,The vector norm can be calculated across what?,any number of dimensions,323
+466,What is the vector norm calculated across any number of dimensions?,sum(abs(x)**ord)**(1./ord),323
+467,What is the Frobenius norm?,"the corresponding dimensions of input are flattened into one dimension, and the norm is calculated on the flattened dimension. Frobenius norm produces the same result as p=2 in all cases except when dim is a list of three or more dims, in which case Frobenius norm throws an error.",347
+468,What does nuc stand for?,nuclear norm,346
+469,What case does Frobenius norm throw an error?,whendimis a list of three or more dims,346
+470,What is nuclear norm?,nuclear norm – Number – sum(abs(x)**ord)**(1./ord),297
+471,What is Number – sum(abs(x)**ord)**(1./ord))?,nuclear norm,297
+472,What is the value of the vector norm?,Number,344
+473,What is the default value for atorch.Tensor?,Default:1e-15,336
+474,What does hermitian indicate if complex or symmetric if real?,Hermitian,336
+475,What is the default value of Hermitian?,False,336
+476,What is the tolerance value to determine when is a singular value zero?,rcond,336
+477,"What is the tensor of shape(*, m, n)where*is zero or more batch dimensions?",A(Tensor),336
+478,What does torch.linalg.inv() compute of a square matrix?,inverse,335
+479,What is the default value of the atorch.Tensor?,1e-15,335
+480,What does torch.linalg.inv() compute?,the inverse of a square matrix,335
+481,What is the tensor of shape where*is zero or more batch dimensions?,A(Tensor),335
+482,What returns the cumulative minimum of elements of input in the dimension dim?,a namedtuple,159
+483,"What is the dimension to do the operation over out(tuple,optional)?",dim(int),159
+484,What returns the mode value of each row of the input tensor in the given dimension dim?,"a namedtuple(values,indices)",190
+485,Indicesis what of each mode value found?,index location,161
+486,"By default,dimis is what?",the last dimension of the input tensor,161
+487,How often does a value appear in a given row of the input tensor?,most often,161
+488,"By default,dimis the what dimension of the input tensor?",last dimension,162
+489,Where is this function not defined?,for torch.cuda.Tensoryet,162
+490,What is the name of the function that determines whether the output tensor hasdimretained or not?,keepdim,162
+491,When are output tensors of the same size as input?,If keepdim is True,162
+492,What is the result tuple of two output tensors?,"out(tuple,optional)",162
+493,This function is not defined what?,for torch.cuda.Tensoryet,162
+494,What is the function for  dimension to reduce?,dim(int),162
+495,"By default,dimis the last dimension of what?",the input tensor,30
+496,When are the output tensors of the same size asinput except in the dimension dimwhere they are of size 1?,If keepdim is True,30
+497,"By default,dimis what dimension of the input tensor?",last dimension,30
+498,In what case are output tensors of the same size as input except in the dimension dimwhere they are of size 1?,If keepdim is True,30
+499,What is another name for squeezed output tensors?,seetorch.squeeze(),30
+500,What determines whether the output tensor hasdimretained or not?,keepdim(bool),30
+501,What is the result of the output tensors being squeezed?,1 fewer dimension than input,90
+502,Note This function is not defined what?,for torch.cuda.Tensoryet,90
+503,What makes the output tensors of the same size as input except in the dimension dimwhere they are of size 1?,If keepdim is True,90
+504,What is the name of the function that results in the output tensors having 1 fewer dimension than input?,seetorch.squeeze(),90
+505,What is this function not defined?,for torch.cuda.Tensoryet,106
+506,"Out(tuple,optional) is the result tuple of two what?",output tensors,106
+507,What website does Alias for torch.ne belong to?, torch.ne,20
+508,What is the name of the website?, torch.ne,20
+509,What does optimizer_class(torch.nn.Optimizer) contain?,the class of the local optimizer,301
+510,What will be forwarded to the given optimizer?,all trailing arguments,301
+511,What can be useful when fine tuning a pre-trained network?,Add a param group to the Optimizers param_groups,301
+512,What can be made trainable and added to theOptimizeras training progresses?,frozen layers,301
+513,What is to(int)?,the rank that receives the global states,301
+514,What is the default value for the rank that receives the global states?,0,301
+515,What is the rank that receives the global states?,to(int),301
+516,What is the state of the optimizer?,state of the optimizer as adict,301
+517,How many entries does the state of the optimizer as adict contain?,two,301
+518,What is a dict containing all parameter groups Partitions parameters across distributed data parallel ranks?,param_groups,301
+519,How many entries does the state of the optimizer contain?,two,301
+520,What is the name of the optimizer state?,state_dict(dict),301
+521,What is a list of dicts?,a list of param_groups,301
+522,Element 0 corresponds to what rank?,"rank 0,",301
+523,What function returns the local_state_dict for a given rank?,insidestep(),301
+524,What is the last known global optimizer state?,globalstate_dict,301
+525,What is the name of the local optimizer?,group,299
+526,What is a bool for when parameters are packed into larger buckets?,parameters_as_bucket_views,299
+527,What will remain intact when disabled?,but params.data,313
+528,What is an example of how to add a param group to the Optimizers param_groups?,Add a param group to the Optimizers param_groups,313
+529,Param.datafields will point to what at different offsets?,bucket views,314
+530,What does state_dict(dict) represent?,optimizer state,314
+531,What does param_group(dict) specify?,Tensors,311
+532,How many consolidated state_dicts are there per rank?,one,311
+533,What is the default value for the rank that receives global states?,0,311
+534,What does state_dict(dict) contain?,optimizer state,311
+535,What is the name of the call that returns the state of the optimizer?,tostate_dict(),311
+536,What is a list of dict?,a list of param_groups,311
+537,"Which element corresponds to rank 0, etc.?",Element 0,311
+538,We need all the ranks for the broadcast what?,insidestep(),311
+539,What does insidestep() return for a given rank?,local_state_dict,311
+540,What does param_groups contain across distributed data parallel ranks?,Partitions parameters,311
+541,What does state_dict(dict) return?,globalstate_dict,311
+542,What can be made trainable by adding a param group to the Optimizers param_groups?,frozen layers,22
+543,What Specifies what Tensors should be optimized along with group specific optimization options?,param_group(dict),315
+544,How many consolidated state_dicts are updated per rank?,one per rank,238
+545,What is the default value for global parameter groups?,0,238
+546,How many states does the consolidated state_dict list update?,one per rank,69
+547,To(int) – the rank that receives the global states. (default: what) Restore the global parameter groups as well as the,0,333
+548,Should be an object returned from a call from what?,tostate_dict(),333
+549,How many consolidated state_dicts does the Optimizers param_groups update?,one per rank,26
+550,What does param_group(dict) do?,Specifies what Tensors should be optimized along with group specific optimization options,300
+551,What is a dict containing all parameter groups?,param_groups,258
+552,What is state_dict(dict)?,optimizer state,332
+553,Restore the global parameter groups as well as what else?,shard,142
+554,What dict contains all parameter groups Partitions parameters across distributed data parallel ranks?,param_groups,88
+555,What is the state of the optimizer as adict?,Gets this rank’sstate_dict,88
+556,What does insidestep return for a given rank?,local_state_dict,88
+557,Restore what as well as the shard?,global parameter groups,143
+558,What is the globalstate_dict?,last known global optimizer state,143
+559,What is a closure that reevaluates the model and returns the loss?,closure,143
+560,What type of loss depends on the underlying optimizer?,Optional,143
+561,What does optional loss depend on?,underlying optimizer,143
+562,Should be an object returned from a call to what?,state_dict(),320
+563,What is the name of the broadcast we need all the ranks for?,insidestep(),312
+564,What is the name of the function that returns the local_state_dict for a given rank?,insidestep(),312
+565,What does getlocal_state_dict for state_dict(dict) return?,globalstate_dict,312
+566,Param_groups contains all parameter groups across distributed data parallel ranks.,Partitions parameters,312
+567,"Which element of the list corresponds to rank 0, etc.?",Element 0,312
+568,What does get local_state_dict for state_dict(dict) return?,globalstate_dict,312
+569,We need all the ranks for the broadcast for what?,insidestep(),15
+570,What does rank(int) return?,get local_state_dict for,226
+571,What is the name of the rank to get local_state_dict for?,rank,226
+572,What differs between?,optimizer classes,275
+573,What class differs between param_groups and param_groups?,optimizer classes,275
+574,A list of param_groups is a list of what?,dict,109
+575,What is a part of distributed data parallel ranks?,Partitions parameters,109
+576,Globalstate_dict consist of a list of what?,shards,109
+577,Partitions parameters across distributed data what?,parallel ranks,109
+578,"What corresponds to rank 0, etc.?",Element 0,239
+579,What is a single optimization step called?,parameter update,180
+580,What is returned for a given rank?,local_state_dict,180
+581,What is the name of the rank to getlocal_state_dict for state_dict(dict)?,rank,180
+582,What is expected to be the inverse of stft()?,Inverse short time Fourier Transform,101
+583,What should the Inverse short time Fourier Transform return?,least squares estimation,101
+584,What condition will the algorithm check using?,NOLA condition,101
+585,Inverse short time Fourier Transform is expected to be the inverse of what?,of stft(),100
+586,What is used to compile TorchScript code?,TorchScript compiler,140
+587,When it is first called during tracing?,Compilesfn,140
+588,What is created by the asynchronous task executingfuncand a reference to the value of the result of this execution?,Creates an asynchronous task executingfuncand a reference to the value of the result of this execution,140
+589,Any TorchScript program can be saved from a what process?,Python,140
+590,Freezing aScriptModulewill clone it and attempt to inline what as constants in the TorchScript IR ,"attempt to inline the cloned module’s submodules, parameters, and attributes",140
+591,What version of the module can be saved for use in a separate process?,offline,140
+592,What does aScriptModule do?,Load aScriptModuleorScriptFunction,140
+593,What is used to optimize a script?,just-in-time compilation,29
+594,"When it is first called during tracing, what does Compilesfn do?",Compilesfn,29
+595,What is the wrapper around C++torch::jit::Module?,Functionally equivalent to aScriptModule,29
+596,What is an executableScriptModule that will be optimized using?,just-in-time compilation,84
+597,What action does TorchScript perform?,Forces completion of atorch.jit.Future[T]asynchronous task,84
+598,Freezing aScriptModulewill what?,clone it,84
+599,What is a wrapper around C++torch::jit::Module?,wrapper around C++torch::jit::Module,63
+600,What is a Wrapper around C++torch::jit::Module?,represents a single function and does not have any attributes or Parameters,63
+601,What does JIT do for Debugging Inspecting Code Interpreting Graphs Tracer Frequently Asked Questions Known Issues Append,Disable JIT,63
+602,What is a gentle introduction to?,TorchScript,103
+603,Appendix Migrating to PyTorch 1.2 Recursive Scripting API References TorchScript is a way to create,Known Issues,103
+604,What is saved an offline version of aScriptModule?,Save an offline version,103
+605,What is the benefit of using TorchScript?,Any TorchScript program can be saved from a Python process and loaded in a process where there is no Python dependency,134
+606,What is an example of a TorchScript program that can be run independently from Python?,a standalone C++ program,135
+607,What is functionally equivalent to aScriptModule?,represents a single function and does not have any attributes or Parameters,138
+608,Where can a TorchScript program be run independently from Python?,a standalone C++ program,138
+609,Disable JIT for Debugging Inspecting Code Interpreting Graphs Tracer Frequently Asked Questions Known Issues Appendix,Python Language Reference Comparison Debugging,138
+610,Python Functions and Modules Debugging Disable JIT for Debugging Inspecting Code Interpreting Graphs Tracer Frequently As,Python Language Reference Comparison,137
+611,"A wrapper around what. Functionally equivalent to aScriptModule, but represents a single function and does not have any attributes or",C++torch::jit::Module,27
+612,What can you do to save an offline version of this module?,Save an offline version of this module,27
+613,What will be used to optimize a script?,just-in-time compilation,104
+614,What version of the module can be saved for use in the TorchScript IR Graph?,offline,104
+615,What does Scripting a function ornn.Module compile as using the TorchScript compiler?,TorchScript code,80
+616,What is the name of the method that provides for conatiner type refinement in TorchScript?,a pass-through function that returnsvalue,80
+617,What function is called when it is first called during tracing?,Compilesfn,12
+618,What does asynchronous task executingfuncand a reference to the value of the result of this execution do?,Creates an asynchronous task executingfuncand a reference to the value of the result of this execution,12
+619,What is the TorchScript method that indicates to the compiler that the left-hand expression is a class instance attribute with type oftype?,a pass-through function that returnsvalue,12
+620,What is a pass-through function that indicates to the TorchScript compiler that the left-hand side expression is a class instance attribute with type,returnsthe_value,83
+621,What is the difference between aScriptModule and C++torch::jit::Module?,represents a single function and does not have any attributes or Parameters,83
+622,What can a traced function do?,can call an encoder module generated using tracing,83
+623,What is used when it is first called during tracing?,Compilesfn,255
+624,What is the difference between C++torch::jit::Module and aScriptModule?,represents a single function and does not have any attributes or Parameters,255
+625,What does Trace a module and return an executableScriptModule that will be optimized using just-in-time compilation?,Creates an asynchronous task executingfuncand a reference to the value of the result of this execution,256
+626,What type of version of a module can you save for use in a separate process?,offline,256
+627,The beam search of a sequence to sequence model will typically be written in script but can call what?,an encoder module generated using tracing,256
+628,What does tracing create?,Creates an asynchronous task executingfuncand a reference to the value of the result of this execution,31
+629,What type of version of a script module can you save for use in a separate process?,offline,31
+630,When are traced functions particularly useful?,when you need to use control-flow around a simple feed-forward model,59
+631,What is an example of a scripted function that can call an encoder module generated using tracing?,a traced function in script,59
+632,What does C++torch::jit::Module have in common with aScriptModule?,represents a single function and does not have any attributes or Parameters,59
+633,Scripted functions can call what?,traced functions,59
+634,What is used to generate an encoder module?,tracing,59
+635,Tracing and scripting can be composed to what?,suit the particular requirements of a part of a model,0
+636,What is a pass-through function that indicates to the TorchScript compiler the type of the_value?,returnsthe_value,0
+637,What can a traced function call?,can call an encoder module generated using tracing,0
+638,What can an encoder module be generated using?,tracing,99
+639,Debugging withpdbworks except for what?,when we invoke the@torch.jit.scriptfunction,60
+640,How can we disable JIT?,globally disable JIT,60
+641,What does TorchScript provide a code pretty-printer for allScriptModuleinstances?,Python syntax,60
+642,What will you need to access.codeon if theScriptModulehas more than one method?,the module,60
+643,What is the output produced by the example above?,TorchScript’s compilation of the code for theforwardmethod,267
+644,We will be able to step into the@torch.jit.scriptfunction as what?,normal Python function,267
+645,What does the code pretty-printer give an interpretation of the script method’s code as valid?,Python syntax,267
+646,What document describes the rules for forwardmethod lookup?,theInspecting Codesection,267
+647,What is the schema for?,built-in functions likeaten,267
+648,"TorchScript has a representation at a lower level than the code pretty- printer, in the form of what?",IR graphs,252
+649,What is TorchScript's static single assignment?,SSA,252
+650,TorchScript follows the same rules described in theInspecting Codesection with regard to what?,forwardmethod lookup,252
+651,Tracing of in-place operations of tensor views (e.g. what?,indexing,252
+652,What is a static single assignment?,SSA,244
+653,What can you use TorchScript’s compilation of the code for theforwardmethod?,to ensure TorchScript (tracing or scripting) has captured your model code correctly,244
+654,What is dependent on the underlying code?,Tracing of control flow,244
+655,What is the name of the C++ backend of PyTorch?,ATen,251
+656,What section describes the rules for forwardmethod lookup?,theInspecting Codesection,251
+657,The graph follows the same rules described in what section?,Inspecting Codesection,253
+658,What language does TorchScript provide a code pretty-printer for allScriptModuleinstances?,Python syntax,253
+659,What produces this output?,The example above,253
+660,"If theScriptModulehas more than one method, you will need to what?",access.codeon the method itself and not the module,25
+661,What is the output of the example above?,TorchScript’s compilation of the code for theforwardmethod,25
+662,What can you use this output for?,to ensure TorchScript (tracing or scripting) has captured your model code correctly,25
+663,Where are these associatedblocks found?,In the graph print-out,25
+664,Why are operators formatted in the graph print-out?,to reflect their equivalent source code forms to facilitate easy debugging,215
+665,Tracing of control flow that is dependent on inputs (e.g. tensor shapes) Tracing of in-place operations,edge cases,215
+666,What does this message indicate to us that the computation differed between when we first traced it and when we traced it with traced?,diagnostic information,215
+667,What does TorchScript use to assign the output to a (unique) value namedrv.1?,%rv.1:Tensormeans,254
+668,What are some cases where the trace of a given Python function/module will not be representative of the underlying code?,edge cases,254
+669,"Tracing of in-place operations of tensor views (e.g., what on the left-hand side of an assignment)",indexing,21
+670,Where is the location in the original source file that generated this instruction?,"on line 9, and at character 10",21
+671,What does this message indicate to us that the computation differed between when we first traced it and when we traced it with thecheck_in,diagnostic information,21
+672,What does the tracer produce?,The tracer produces warnings for several problematic patterns in traced computation,236
+673,Which version of TorchScript does this section detail the changes to TorchScript in?,PyTorch 1.2,249
+674,If you are new to TorchScript you can do what?,skip this section,249
+675,What does Torch.jit.script now do?,"attempt to recursively compile functions, methods, and classes",249
+676,"What is now the preferred way to createScriptModules, instead of inheriting fromtorch.jit.ScriptModule?",2.torch.jit.script(nn_module_instance),249
+677,Methods called fromforwardare what in the order they are used inforward?,lazily compiled,249
+678,"To stop the compiler from what, add@torch.jit.ignoreor@torch.jit.unused. @ignor",compiling a method,249
+679,@ignoredcannot be exported;@unusedcan?,@ignoredcannot be exported;@unusedcan,249
+680,"To compile a method other thanforwardthat is not called fromforward, what is done?",add@torch.jit.export,23
+681,What does @ignoreleaves the method as a call to python?,@ignoreleaves the method as a call to python,23
+682,What is now the preferred way to createScriptModules?,2.torch.jit.script(nn_module_instance),23
+683,Methods called fromforwardare what?,lazily compiled,23
+684,Add@torch.jit.ignoreor@torch.jit.unused. @ignoreleaves the method as a,compiling a method,23
+685,"For empty container types, what should empty container types do?",annotate their types usingPEP 526-styleclass annotations,23
+686,Annotate their types usingPEP 526-styleclass annotations.,empty container types,105
+687,What is used as an entry point into aScriptModuleand should be compiled?,annn.Module,105
+688,What is an example of a function that does not need a decorator?,@torch.jit.exporton a method,105
+689,Before PyTorch 1.2 what decorator was used to make a function or method callable from code that is exported?,@ignore,262
+690,What is compiled in the order they are used inforward?,@torch.jit.exportmethods,262
+691,What is used as an entry point into aScriptModule and should be compiled?,annn.Module,262
+692,Warning TorchScript class support is experimental. Currently it is best suited for what?,simple record-like types,262
+693,Warning The@torch.jit.ignoreannotation’s behavior changes in what?,PyTorch 1.2,262
+694,See@torch.jit.ignoreand@torch.jit.unused for what?,details,262
+695,Warning TorchScript class support is what?,experimental,262
+696,If a type cannot be inferred and is what?,not explicitly annotated,262
+697,What did PyTorch 1.2 use to get the @ignore decorator back?,use@torch.jit.unused(),234
+698,TorchScript class support is what?,experimental,234
+699,Everything in a user definedTorchScript Classis exported what way?,by default,234
+700,When does the @torch.jit.ignoreannotation’s behavior change?,PyTorch 1.2,234
+701,"Functions don’t change much, they can be decorated with what?",@torch.jit.ignoreortorch.jit.unusedif needed,234
+702,What decorator was used to make a function or method callable from code that is exported?,@ignore,234
+703,What does @torch.jit.ignore and@torch.jit.unused provide?,details,234
+704,What cannot have their types inferred and must have their types annotated withPEP 526-styleclass?,Empty lists and dicts,234
+705,"To stop the compiler from compiling a method, add what?",@torch.jit.ignoreor@torch.jit.unused,250
+706,What eleaves the method as a call to python?,@ignor,250
+707,What can empty container types do?,annotate their types,250
+708,What compiler compiles the module?,TorchScript,250
+709,See@torch.jit.ignoreand@torch.jit.unusedfor what?,details,232
+710,"To get this functionality back, use what?",@torch.jit.unused(),232
+711,What is TorchScript class support best suited for?,simple record-like types,232
+712,What does the TorchScript compiler need to know the types ofmodule attributes?,Most types,232
+713,"To get this functionality back, what did PyTorch 1.2 use to get it back?",use@torch.jit.unused(),136
+714,What is an example of a Python 3 type hints?,@torch.jit.exporton a method,136
+715,What cannot have their types inferred from the value of the member?,Empty lists and dicts,237
+716,Computes the bitwise OR ofinputandother. Computes the bitwise XOR ofinputandother.,AND,127
+717,Computes the bitwise what ofinputandother?,OR,3
+718,What does Computes the bitwise NOT of the given input tensor?,Computes the bitwise NOT,168
+719,What does Computes the bitwise OR ofinputandother?,Computes the bitwise OR ofinputandother,129
+720,Computes what NOT of the given input tensor?,bitwise,44
+721,"What is the name of the function that clamps all elements in inputinto the range[min,max]?",torch.clamp(),44
+722,What does Alias fortorch.clamp() clamp?,"all elements in inputinto the range[min,max]",334
+723,Computes the bitwise NOT of the given input tensor. Computes the bitwise OR ofinputandother?,Computes the bitwise OR ofinputandother,2
+724,What does Alias fortorch.clamp() compute?,the element-wise conjugate of the giveninputtensor,2
+725,What does Alias fortorch.clamp() create a new floating-point tensor with?,the magnitude ofinputand the sign ofother,2
+726,What tangent does Alias fortorch.atan() return a new tensor with?,inverse hyperbolic tangent,2
+727,What computes the element-wise conjugate of the given inputtensor?,torch.clamp(),165
+728,What computes the element-wise conjugate of the giveninputtensor?,torch.clamp(),45
+729,What does Alias fortorch.clamp() do?,"Clamps all elements in inputinto the range[min,max].",45
+730,"Clamps which elements in inputinto the range[min,max]?","all elements in inputinto the range[min,max].",169
+731,What returns the indices of the maximum value of all elements in theinputtensor?,Returns the indices of the maximum value of all elements in theinputtensor,176
+732,What returns the maximum value of each slice of theinputtensor in the given dimension(s)dim?,the indices of the minimum value(s) of the flattened tensor or along a dimension,176
+733,Returns what of the minimum value(s) of the flattened tensor or along a dimension?,the indices,177
+734,Returns what value in the given dimension(s)dim?,the maximum value of each slice of theinputtensor,185
+735,What does Returns the matrix norm or vector norm of a given tensor return?,the sum of all elements,185
+736,What does Returns ignoreNaNvalues?,the median of the values in input,216
+737,What quantiles of each row of theinputtensor along the dimensiondim?,q-th,216
+738,Tests if all elements in inputevaluate to what?,True,216
+739,Returns what value?,the minimum value of all elements in theinputtensor,216
+740,"Returns what value, ignoringNaNvalues?",the median of the values in input,181
+741,What does the variant of torch.quantile() do?,ignores,187
+742,"If unbiased is True, Bessel's correction will be used to calculate what?",standard deviation,187
+743,What does Bessel's correction return?,the sum of all elements in theinputtensor,187
+744,Returns what of the input tensor?,unique elements,187
+745,Returns what elements of the input tensor?,unique elements,187
+746,What does Bessel's correction remove from every consecutive group of equivalent elements?,Eliminates all but the first element,187
+747,What is Bessel's correction used for?,If unbiased is True,187
+748,What is returned when Not a Numbers (NaNs) are treated as zero?,the sum of all elements,188
+749,Bessel's correction will be used to calculate the standard deviation.,If unbiased is True,188
+750,What happens to every consecutive group of equivalent elements?,Eliminates all but the first element,188
+751,What does Returns the sum of all elements in theinputtensor?,the product of all elements in theinputtensor,191
+752,What does Returns treat Not a Numbers (NaNs) as zero?,the sum of all elements,191
+753,The variant of torch.quantile()ignores what ifNaNvalues in inputdid not exist?,quantilesqas,189
+754,What is Bessel's correction?,If unbiased is True,189
+755,"If Bessel's correction is used, what will be used to calculate the standard deviation?",If unbiased is True,186
+756,Returns the sum of all elements in the inputtensor.,unique elements,186
+757,What are Broadcast_tensors() used for?,shapes,201
+758,What is returned when the indices of the buckets are set byboundaries?,Do cartesian product of the given sequence of tensors,201
+759,What returns the cumulative product of elements ofinputin the dimensiondim?,Returns the cumulative product of elements ofinputin the dimensiondim,201
+760,Returns what of the buckets to which each value in the input belongs?,indices,175
+761,Computes batched the what?,p-norm distance between each pair of the two collections of row vectors,34
+762,What does return a copy ofinput?,Compute combinations of lengthrrrof the given tensor,174
+763,Returns the indices of what?,buckets,174
+764,What returns the indices of the buckets to which each value in the input belongs?,Do cartesian product of the given sequence of tensors,174
+765,"What is returned when a namedtuple(values,indices)wherevaluesis the cumulative minimum of elements ofinputin the",the cumulative product of elements ofinputin the dimensiondim,174
+766,"Ifinputis a vector (1-D tensor), then returns what?",a 2-D square tensor,9
+767,What product of the given sequence of tensors?,Do cartesian product,67
+768,"What does the namedtuple(values,indices)wherevaluesis the cumulative minimum of elements ofinputin the dimensiondim",the cumulative product of elements ofinputin the dimensiondim,67
+769,What is used to get the @ignore functionality back?,@torch.jit.unused(),233
+770,What is an example of a method that does not need the @ignore decorator?,@torch.jit.exporton a method,261
+771,Sums the product of the elements of the inputoperandsalong dimensions specified using a notation based on what?,Einstein summation convention,208
+772,What specifies the subscripts for each dimension of the inputoperandsin the same order as the dimensions?,Theequationstring,235
+773,What is the envelop created by?,the summation of all the windows,97
+774,What is the envelop created by the summation of all the windows at a certain point in time?,0,97
+775,Why does stft return a shorter signal than the original signal?,Since stft()discards elements at the end of the signal if they do not fit in a frame,97
+776,What is the envelop created by the summation of all windows never zero at certain point in time?,0,97
+777,"If the signal isn’t padded, what can result in a shorter signal than the original signal?",ifcenteris False,97
+778,What is the envelop created by the summation of all windows at certain point in time?,never zero,98
+779,What can be trimmed off exactly because they can be calculated?,Left padding,98
+780,"If the signal isn't padded, what can result in a shorter signal than the original signal?",ifcenteris False,98
+781,What discards elements at the end of the signal if they do not fit in a frame?,Since stft(),202
+782,"If the signal isn't padded, what happens?",If center is True,202
+783,"If center is True, there will be padding e.g. what?",constant,202
+784,Why can left padding be trimmed off exactly?,because they can be calculated,89
+785,"If there is padding, what is it called?",If center is True,89
+786,"If centerisTrue, then there will be padding e.g.'reflect','reflect', etc.",constant,89
+787,What is the default setting for padding?,If center is True,89
+788,"Who wrote ""Signal estimation from modified short-time Fourier transform""?",D. W. Griffin and J. S. Lim,266
+789,What is the input tensor expected to be?,output of stft(),266
+790,When was real input deprecated?,1.8.0,266
+791,What is the channel dimension?,optional,218
+792,Since what version is real input deprecated?,1.8.0,62
+793,What is hop_length?,The distance between neighboring sliding window frames,62
+794,Whether the STFT was onesided or onesided?,onesided,62
+795,What is the size of Fourier transform hop_length?,The distance between neighboring sliding window frame,294
+796,What is the default value of hop_length(Optional[int])?,n_fft//4),283
+797,What is expected to be output of stft()?,input tensor,219
+798,Since what version is the input tensor deprecated?,1.8.0,219
+799,What is the size of window frame and STFT filter?,win_length,340
+800,What is window(Optional[torch.Tensor])?,optional window function,340
+801,What is center(bool)?,Whether input was padded on both sides,340
+802,What is the amount to trim the signal by?,the original signal length,340
+803,Is return_complex compatible or incompatible with onesided=True?,incompatible,340
+804,"What is the value of size (..., signal_length)?",Least squares estimation of the original signal,340
+805,What is Torch.ones(Optional[torch.Tensor]) called?,win_length,61
+806,What is the default value for center(bool)?,True,281
+807,What is the distance between neighboring window frames?,hop_length,281
+808,What is win_length?,The size of window frame and STFT filter,281
+809,What is the default value of center(bool)?,True,281
+810,What is the distance between neighboring sliding window frames?,hop_length,281
+811,What is the optional window function?,"Whether input was padded on both sides so that thettt-th frame is
+centered",341
+812,What does true if n_fft! mean in the input size?,fft_size,284
+813,What is onesided(Optional[bool])?,Whether the STFT was onesided,298
+814,What is the default value for the output of a STFT?,return_complex,298
+815,What is Optional[bool]) – Whether the output should be complex or if the input should be assumed to derive from ,return_complex,292
+816,What is incompatible with return_complex?,withonesided=True,292
+817,What is the tensor of size?,1-D,152
+818,Non-integerstepis subject to what when comparing againstend?,floating point rounding errors,152
+819,What happens when the data type is inferred from the other input arguments?,If dtype is not given,152
+820,"If any ofstart,end, orstopare floating-point, what is inferred to be the default dtype?",thedtypeis,152
+821,What is the default value for the starting value for the set of points?,Default:0,151
+822,What is returned by size end start stepleftlceil fractextend?,1-D tensor,151
+823,"Out(Tensor,optional) – what is the output tensor?",output tensor,319
+824,What is the default value for the ending value for the set of points step(Number)?,Default:1,279
+825,What is the gap between each pair of adjacent points?,step(Number),322
+826,What is the default tensor type used by if None?,Default,309
+827,What will infer the data type from the other input arguments?,If dtype is not given,277
+828,"If any ofstart,end, orstopare what, thedtypeis inferred to be the default dtype?",floating-point,277
+829,What is the default dtype inferred to?,betorch.int64,277
+830,"If any ofstart,end, orstopare floating-point, thedtypeis inferred to what?",betorch.int64,277
+831,What uses a global default (seetorch.set_default_tensor_type())?,Default: if None,277
+832,What is the default layout of returned Tensor?,Default:torch.strided,277
+833,What contains data structures for multi-dimensional tensors and defines mathematical operations over these tensors?,The torch package,227
+834,What does the torch package provide?,"it provides many utilities for efficient serializing of Tensors and arbitrary types, and other useful utilities",227
+835,What does torch have that enables you to run your tensor computations on an NVIDIA GPU with compute capability >= 3.0?,CUDA counterpart,227
+836,What does the CUDA counterpart return?,True if obj is a PyTorch storage object,227
+837,What utility does the torch package provide for Tensors and arbitrary types?,efficient serializing,227
+838,What does True if obj is return?,PyTorch storage object,227
+839,What package contains data structures for multi-dimensional tensors?,torch,228
+840,What has the counterpart of the torch package?,CUDA,228
+841,What enables you to run your tensor computations on an NVIDIA GPU with compute capability >= 3.0?,CUDA counterpart,102
+842,What does True return if obj is a PyTorch tensor?,PyTorch storage object,102
+843,What are two examples of a complex data type?,"one of torch.complex64, andtorch.complex128",102
+844,What is the name of the GPU that allows you to run tensor computations on an NVIDIA GPU with compute capability >= 3.0,CUDA,102
+845,What type of data type is the data type of input?,floating point data type,146
+846,"What is returned when a namedtuple(values,indices) returns the cumulative minimum of elements of input in the dimension dim",cumulative product of elements of input in the dimension dim,155
+847,What does Returns the cumulative product of elements of input in the dimension dim?,the cumulative sum of elements of input in the dimension dim,32
+848,What is the sum of elements of input in the dimension dim?,cumulative product,7
+849,"What is returned when a namedtuple(values,indices) returns the cumulative product of elements of input in the dimension dim",cumulative sum of elements of input in the dimension dim,8
+850,What is reduced in the batch matrix-matrix product of matrices stored in batch1 and batch2?,add step,115
+851,What does it perform of matrices in batch1 and batch2?,batch matrix-matrix product,115
+852,What happens to all matrix multiplications along the first dimension?,all matrix multiplications get accumulated along the first dimension,115
+853,What does the matrix multiplication of matrices perform?,matrices mat1 and mat2,115
+854,What is performed of the matrices mat1 and mat2?,matrix multiplication,116
+855,What does it perform and adds it to the matrix input?,outer-product of vectors vec1 and vec2,116
+856,What does the inverse of a symmetric positive-definite matrix do?,returns matrix inv,116
+857,What does the matrixmatand the vectorvec perform?,matrix-vector product,121
+858,Performs what of the matrices mat1 andmat2?,matrix multiplication,121
+859,What is the matrix product of?,NNN2-D tensors,121
+860,What product of the matrixmatand the vectorvec?,matrix-vector product,124
+861,What happens to the outer-product of vectors vec1 and vec2?,adds it to the matrix input,124
+862,What returns the matrix product of the NNN2-D tensors?,Returns the matrix product of the NNN2-D tensors,124
+863,What product of vectorsvec1 andvec2 is added to the matrix input?,outer-product,123
+864,What is performed of the matrixmatand the vectorvec?,matrix-vector product,123
+865,What does the matrix-vector product of matrices perform?,batch matrix-matrix product of matrices in batch1 and batch2,123
+866,What performs a batch matrix-matrix product of matrices stored in input and mat2?,batch matrix-matrix product of matrices in batch1 and batch2.,120
+867,Returns the matrix product of what?,NNN2-D tensors,117
+868,What is used to perform a batch matrix-matrix product?,matrices stored in input and mat2,117
+869,What does a real square matrix compute?,eigenvalues and eigenvectors,117
+870,What is the low-level function for calling LAPACK’s geqrf directly?,Alias of torch.outer(),117
+871,What is this function for calling LAPACK’s geqrf directly?,low-level function,117
+872,Is this a low-level function for calling LAPACK's geqrf directly?,low-level function,117
+873,What calculates the log determinant of a square matrix or batches of square matrices?, torch.linalg.slogdet,117
+874,Who computes the decomposition of a symmetric positive-definite matrixAAAor for batches of symmetric positive-definite matrices,Cholesky,130
+875,What performs the outer-product of vectorsvec1 andvec2?,batch matrix-matrix product of matrices in batch1 and batch2,130
+876,Performs the outer-product of what and adds it to the matrix input?,vectors vec1 and vec2,131
+877,What decomposition of a symmetric positive-definite matrixAAor is computed for batches of symmetric positive-definite matrices,Cholesky,131
+878,What is the dot product of two 1D tensors?,dot product of two 1D tensors,131
+879,What does this low-level function call directly?,LAPACK’s geqrf,131
+880,What returns the inverse of a symmetric positive-definite matrix?,returns matrix inv,14
+881,Solves a linear system of equations with a positive semidefinite matrix to be inverted given what?,Cholesky factor matrixuuu,14
+882,What is the low-level function for calling LAPACK's geqrf directly?,Alias of torch.outer(),14
+883,What is the matrixuuu of a positive semidefinite matrix?,Cholesky factor,14
+884,Solves what with a positive semidefinite matrix to be inverted given its Cholesky factor matrixuuu?,a linear system of equations,35
+885,What does the Cholesky factoruuu compute?,dot product of two 1D tensors,35
+886,What is the Cholesky decomposition of for batches of symmetric positive-definite matrices?,symmetric positive-definite matrixAAAor,35
+887,What does the Cholesky factoruuu return?,returns matrix inv,183
+888,What does the inverse of a symmetric positive-definite matrixAAAusing its Cholesky factoruuu return?,matrix inv,183
+889,What is returned by Computes the inverse of a symmetric positive-definite matrixAAAusing its Cholesky factoruuu?,matrix inv,36
+890,What does this function compute?,the base two exponential function of input,48
+891,What does Alias of torch.outer compute the dot product for?,1D tensors,38
+892,Computes the eigenvalues and eigenvectors of a real square matrix?,dot product,38
+893,What calculates the dot product for 1D tensors?,Alias of torch.outer(),38
+894,A linear system of equations with a positive semidefinite matrix to be inverted given what matrix?,Cholesky factor matrix,203
+895,What does Alias for torch.linalg.det() call?, torch.linalg.inv(),203
+896,What does Alias for torch.linalg.det() calculate?,log determinant,204
+897,Computes the dot product for 1D tensors?,Alias of torch.outer(),204
+898,What computes the dot product for 1D tensors?,Alias of torch.outer(),4
+899,What problems does Alias for torch.linalg.slogdet() solve?,least squares and least norm problems,4
+900,What is the sum of the vector norm?,sum(abs(x)**ord)**(1./ord),345
+901,When is the output tensor ignored in torch.norm?,ifdim=None,308
+902,What is the input tensor casted to when performing the operation?,:attr:’dtype’,308
+903,What is the default value of the input tensor in torch.norm?,None,70
+904,"If specified, the input tensor is casted to what?",:attr:’dtype’,276
+905,What applies only to tensors with exactly two dimensions?,Frobenius norm,276
+906,What is an example of a tensor that can only be applied across exactly two dimensions?,Frobenius norm,276
+907,What does torch.ARCTANH do?, torch.atanh(),18
+908,What does torch.ANY do?,Tests if any element in input evaluates to True,217
+909,torch.ANY function matches the behavior of what function?,"This function matches the behaviour of NumPy in returning
+output of dtypeboolfor all supported dtypes exceptuint8.
+Foruint8the dtype of output isuint8itself.",217
+910,What is the dtype of output for uint8?,For uint8the dtype of output isuint8 itself,287
+911,What does input(Tensor) do?,returns True if any element in the row evaluate to True and False otherwise.,287
+912,What is the dtype of output in torch.any?,uint8,241
+913,What does the function return for each row of input in the given dimension dim?,Trueif any element in the row evaluate toTrueandFalseotherwise,241
+914,What function returns the output tensor of the same size asinput?,If keepdim is True,241
+915,"If keepdimisTrue, the output tensor has what?","the output tensor is of the same size
+asinput",241
+916,What function ensures that the output tensor is of the same size as input except in the dimension dim where it is of size 1?,keepdim is True,241
+917,"If keepdim is True, the output tensor is of the same size asinput except in the dimension dimwhere it is",1 fewer dimension,241
+918,What is the dtype of foruint8?,output isuint8itself,107
+919,What function returns output of dtypebool for all supported dtypes exceptuint8?,NumPy,107
+920,What does the function return for each row of inputin the given dimension dim?,Trueif any element in the row evaluate toTrueandFalseotherwise,107
+921,"For each row of inputin the given dimension dim, returns what?",Trueif any element in the row evaluate toTrueandFalseotherwise,107
+922,"For each row of input in the given dimension dim, returns what?",True if any element in the row evaluate toTrueandFalseotherwise,81
+923,Where is the output tensor of the same size asinput except in the dimension dim?,"keepdimisTrue, the output tensor is of the same size
+asinput",81
+924,What happens if the output tensor is squeezed?,1 fewer dimension than input,81
+925,What types of input does this function support?,"float,double,cfloatandcdoubledtypes",242
+926,What does LU_data(Tensor) do?,LU factorization,242
+927,What type of input does this function support?,for input,242
+928,What must the batch dimensions of LU_pivots be equal to?,the batch dimensions ofLU_data,269
+929,What must be the batch dimensions of LU_pivots be to the batch dimensions of LU_data?,equal,269
+930,What returns the cumulative maximum of elements of input in the dimension dim?,a namedtuple,157
+931,What is the output specified by for a 3-D tensor?,inputandindexmust have the same number of dimensions,86
+932,Do inputandindexdo broadcast against each other?,not broadcast against each other,86
+933,What does index(LongTensor) contain?,"indices of elements to gather sparse_grad(bool,optional)",86
+934,What must have the same number of dimensions?,input and index,282
+935,What type of elements represent if each element of input is real-valued or not?,boolean elements,163
+936,What is a boolean tensor?,A boolean tensor that is True where input is real and False elsewhere,163
+937,What is the default value of a boolean tensor?,True,163
+938,Returns a new tensor with boolean elements representing what?,if each element of input is real-valued or not,163
+939,What type of values are considered real?,Complex values are considered real when their imaginary part is 0,163
+940,When are complex values considered real?,when their imaginary part is 0. input(Tensor) – the input tensor,163
+941,What is a boolean tensor that is whereinput is real and False elsewhere?,True,163
+942,What is nonlinearity gain?,"Linear / Identity 111 Conv{1,2,3}D 111 Sigmoid 111 Tanh 53\frac{5}{3}35​ ReLU 2\sqrt{2}2​ Leaky Relu 21+negative_slope2\sqrt{\frac{2}{1 + \text{negative\_slope}^2}}1+negative_slope22​​ SELU 34\frac{3}{4}43​",296
+943,What does this give the initial weights?,variance of1/N,260
+944,What does the default gain forSELUsacrifice?,normalisation effect,260
+945,What does the default gain forSELU sacrifice for more stable gradient flow in rectangular layers?,normalisation effect,24
+946,What is the value to fill the tensor with Examples?,an n-dimensionaltorch.Tensor val,272
+947,Fills the input Tensor with what value1?,scalar,79
+948,What value does a tensor fill the input Tensor with?,scalar value0,327
+949,What value does the input Tensor fill with?,scalar,321
+950,What does a tensor do when as many inputs are preserved as possible?,Preserves the identity of the inputs inLinearlayers,329
+951,What value does Tensor val fill the input Tensor with?,scalar value,329
+952,What does a tensor do in Linearlayers?,Preserves the identity of the inputs,329
+953,Fills the 2-dimensional input tensorwith with scalar value1?,identity matrix,78
+954,What is the function that preserves the identity of the inputs in Linearlayers?,Preserves the identity of the inputs in Linearlayers,76
+955,What does Linearlayers do?,Preserves the identity of the inputs,339
+956,What is the input Tensor filled with?,scalar value 0,326
+957,What does Examples Fill the input Tensor with?,scalar value0,72
+958,What does filling the 2-dimensional input tensor with the identity matrix do?,Preserves the identity of the inputs with the scalar value 1,75
+959,What does tensor fill the 2-dimensional input tensor with?,the identity matrix,325
+960,What does tensor do in Linearlayers?,Preserves the identity of the inputs,325
+961,What does Examples fill the input Tensor with?,scalar value 0,71
+962,What does Filling the 2-dimensional input tensor with the identity matrix do?,Preserves the identity of the inputs,71
+963,What reduces the amount of matrix multiplications in a batch matrix-matrix product?,addbmm,111
+964,Batch1 and batch2 must be what?,3-D tensors,111
+965,What must batch1 and batch2 be?,3-D tensors,112
+966,What does addbmm operator support?,This operator supportsTensorFloat32,112
+967,What happens in a reduced add step?,all matrix multiplications get accumulated along the first dimension,113
+968,"For inputs of typeFloatTensororDoubleTensor, arguments beta and alpha must be what",real numbers,113
+969,"If input is ignored, andnanandinfin it will not be propagated.","Ifbetais 0,",113
+970,What must batch1 and batch2 be?,3-D tensors,271
+971,Which inputs will not be propagated ifbetais 0?,andnanandinfin,92
+972,inputs of addbmm must be?,argumentsbetaandalphamust be real numbers otherwise they should be integers. This operator supportsTensorFloat32.,92
+973,"If input is ignored, what is it?","Ifbetais 0,",93
+974,What must argumentsbeta andalpha be for inputs of typeFloatTensororDoubleTensor?,argumentsbetaandalphamust be real numbers,93
+975,What is the first batch of matrices to be multiplied?,batch1,82
+976,What is the name of the Moore-Penrose inverse?,pseudoinverse,50
+977,What is the most computationally convenient way to understand the pseudoinverse?,SVD,50
+978,What does the Moon-Penrose inverse stand for?,the pseudoinverse,50
+979,What does the SVD support?,batches of matrices,224
+980,"What supports input of float, double, cfloat, and cdouble dtypes?",SVD,224
+981,What is a matrix on the left multiplied by?,the pseudoinverse,224
+982,The pseudoinverse is more computationally convenient to understand through what?,SVD,51
+983,What part of the matrix is used in computations?,lower triangular part of the matrix,51
+984,Ifhermitian= what is assumed to be Hermitian if complex or symmetric if real?,True,223
+985,What is assumed to be Hermitian if complex or symmetric if real?,If hermitian= True,95
+986,The singular values below the specifiedrcondthreshold are treated as what?,zero,95
+987,What is assumed to be if complex or symmetric if real?,Hermitian,95
+988,What values that are below the specifiedrcondthreshold are treated as zero and discarded in the computation?,The singular values,95
+989,What does this function synchronize with the CPU for?,CUDA inputs,95
+990,Supports input of what types of input?,"float, double, cfloat and cdouble dtypes",210
+991,What type of matrices does Ais support?,batches of matrices,210
+992,"Ifhermitian= what, is Ais assumed to be Hermitian if complex or symmetric if real?",True,210
+993,What part of the matrix is used instead of Hermitian?,lower triangular part of the matrix,94
+994,What should be done to the singular values that are below the specifiedrcondthreshold?,treated as zero and discarded in the computation.,94
+995,"Supports input of float, double, cfloat and what other dtype?",cdouble,211
+996,"Supports input of float, double, cfloat and cdouble dtypes. Also supports what?",batches of matrices,211
+997,What does this function synchronize with the CPU?,CUDA inputs,211
+998,What are the singular values that are below the specifiedrcondthreshold treated as?,zero,225
+999,What function synchronizes a CUDA input with the CPU?,usestorch.linalg.svd()ifhermitian= False,225
+1000,Why is it always preferable to uselstsq()?,faster and more numerically stable,243
+1001,What is the default value of atorch.Tensor?,1e-15,193
+1002,What computes the inverse of a square matrix?,torch.linalg.inv(),193

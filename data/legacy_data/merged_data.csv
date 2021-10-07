@@ -1,0 +1,51 @@
+,question,answer,group_id
+0,"What values are specified to replaceNaN, positive infinity, and negative infinity values in input?","bynan,posinf, andneginf",141
+1,"By default,NaN is replaced with what value?",zero,141
+2,What values are used to replace negative infinity values in input?,"bynan,posinf, andneginf",141
+3,What is the default value for negative infinity?,the least finite value,141
+4,What is the value to replace positive infinity values with?,posinf,295
+5,What is the value to replace negative infinity values with?,neginf,295
+6,What is the greatest finite value represented by?,posinf,288
+7,What does Alias for torch.linalg.slogdet() do?,Performs a batch matrix-matrix product of matrices stored in input and mat2. Returns the matrix product of the NNN2-D tensors,118
+8,Returns the what solve of the linear systemAx=bAx = bAx=busing the partially pivoted LU factorization,LU,118
+9,Performs what of matrices stored in input and mat2?,a batch matrix-matrix product,118
+10,Computes the dot product for 1D tensors. Computes the eigenvalues and eigenvector,Alias of torch.outer(),118
+11,Computes the dot product for what?,1D tensors,118
+12,What is the name of the function that computes the dot product for 1D tensors?,Alias of torch.outer(),118
+13,What is a low-level function for calling LAPACK’s geqrf directly?,eigenvalues and eigenvectors of a real square matrix,118
+14,What does TORCH.DIV do?,Divides each element of the input input by the corresponding element of other.,66
+15,Always promotes integer types to what type?,default scalar type,212
+16,Performs what type of rounding if both input and other are integer types?,no rounding,209
+17,What is equivalent to NumPy's np.true_divide?,TORCH.DIV,214
+18,What is the Python equivalent to floor division in Pytorch ?,TORCH.DIV,257
+19,What type of integer division is trunc equivalent to?,C-style,257
+20,What is equivalent to the /operator in Python and NumPy'snp.true_divide?,true division,257
+21,What rounds the results of the division towards zero?,trunc,257
+22,What type of rounding rounds the results of the division down?,floor,257
+23,What does the // operator and NumPy'snp.floor_divide equivalent to?,floor division,257
+24,What type of rounding does None perform?,no rounding,257
+25,What type of division is equivalent to trunc?,C-style integer division,257
+26,What is the name of the rounding that rounds the results of a division down?,floor,257
+27,What is equivalent to floor division in Python?,NumPy’snp.floor_divide,257
+28,What is the case when the inputs are promoted to the default scalar type?,if both input and other are integer types,286
+29,What is equivalent to true division in Python?,C-style integer division,318
+30,What is the Pytorch equivalent to TORCH.DIV to in Python?,true division,318
+31,What is the default behavior of rounding in TORCH.DIV?,None,318
+32,"Does rounding_mode(str,optional) perform any rounding?",no,318
+33,"When does rounding_mode(str,optional) perform no rounding?",if both input and other are integer types,318
+34,What is equivalent to the /operator in Python?,true division,318
+35,What happens if both input and otherare integer types?,Performs no rounding,304
+36,What is the name of Alias for torch.trunc?,torch.fix,264
+37,What does Alias for torch.le stand for?,TORCH.LESS_EQUAL,19
+38,What creates a new tensor?,TORCH.COLUMN_STACK,213
+39,What is each zero or one dimensional tensortin tensors first reshaped into?,"a(t.numel(),1)column",57
+40,"What does tensors(sequence of Tensors) concatenate out(Tensor,optional",output tensor,57
+41,What TORCH.IS_TENSOR does?,Returns True if obj is a PyTorch tensor.,145
+42,What TORCH.IS_TENSOR return?,True,145
+43,What is the function that returns true if obj is a PyTorch tensor?,TORCH.IS_TENSOR,145
+44,What is the return value for if obj is a PyTorch tensor?,True,145
+45,What is the function that returns True if obj is a PyTorch tensor?,"doingisinstance(obj,Tensor)",145
+46,What is better for typechecking with mypy?,isinstance,144
+47,What is that isinstance check better for?,typechecking with mypy,144
+48,What does set_flush_denormal() do?,Disables denormal floating numbers on CPU,65
+49,On what architectures is set_flush_denormal() only supported?,x86 architectures,65
